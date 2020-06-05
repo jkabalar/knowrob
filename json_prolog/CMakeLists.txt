@@ -10,12 +10,13 @@ find_package(catkin REQUIRED COMPONENTS
     rosprolog
     knowrob_common
     json_prolog_msgs
+    std_msgs
 )
 
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES json_prolog_client
-  CATKIN_DEPENDS json_prolog_msgs roscpp roslib rospack
+  CATKIN_DEPENDS json_prolog_msgs roscpp roslib rospack std_msgs
 )
 
 # find SWI Prolog libraries
@@ -53,6 +54,10 @@ add_dependencies(json_prolog_client ${catkin_EXPORTED_TARGETS})
 add_executable(test_json_prolog examples/test_json_prolog.cpp)
 target_link_libraries(test_json_prolog json_prolog_client ${catkin_LIBRARIES})
 add_dependencies(test_json_prolog ${catkin_EXPORTED_TARGETS})
+
+add_executable(json_prolog_wrapper examples/json_prolog_wrapper.cpp)
+target_link_libraries(json_prolog_wrapper json_prolog_client ${catkin_LIBRARIES})
+add_dependencies(json_prolog_wrapper ${catkin_EXPORTED_TARGETS})
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
