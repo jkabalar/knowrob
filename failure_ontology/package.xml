@@ -1,0 +1,19 @@
+<package>
+  <name>failure_ontology</name>
+  <version>1.0.1</version>
+  
+  <description>The failure_ontology package contains descriptions of possible failures
+  </description>
+   <maintainer email="mohammed.diab@upc.edu">Mohammed Diab</maintainer>
+   <author>Mohammed Diab</author>
+   <license>BSD</license>
+
+   <url type="website">http://ease-crc.org</url>
+   <author email="julia.kabalar@tum.de">Julia Kabalar</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+	
+  <build_depend>knowrob_common</build_depend>
+  <run_depend>knowrob_common</run_depend>
+
+</package>
