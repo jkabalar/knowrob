@@ -1,7 +1,7 @@
 json_prolog
 ===
 
-The interactive Prolog shell that [rosprolog](http://ros.org/wiki/rosprolog|rosprolog)
+The interactive Prolog shell that rosprolog
 provides is good for exploring KnowRob, visualizing knowledge,
 developing new functions and debugging Prolog code.
 

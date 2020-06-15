@@ -62,6 +62,8 @@ add_dependencies(json_prolog_wrapper ${catkin_EXPORTED_TARGETS})
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
-  
+
 install(DIRECTORY launch/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch )
+find_package(roslaunch REQUIRED)
+roslaunch_add_file_check(launch)
